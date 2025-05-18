@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:overlay_search/src/overlay_content.dart';
 import 'package:overlay_search/src/overlay_list_item.dart';
-
 import 'package:overlay_search/src/search_text_field.dart';
 
 import 'debounce.dart';
@@ -97,7 +96,7 @@ class _SearchWithListState extends State<SearchWithList> {
     return CompositedTransformTarget(
       link: widget.overlaySearchController.layerLink,
       child: SearchTextField(
-        focusNode: widget.overlaySearchController.searchFocusNode,
+        focusNode: FocusNode(),
         controller: widget.overlaySearchController.searchController,
         hint: widget.hint,
         focusedHint: widget.focusedHint,
